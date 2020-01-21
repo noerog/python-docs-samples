@@ -102,7 +102,7 @@ def delete_resource(
     """Deletes a FHIR resource or returns NOT_FOUND if it doesn't exist."""
     url = "{}/projects/{}/locations/{}".format(base_url, project_id, cloud_region)
 
-    resource_path = "{}/datasets/{}/fhirStores/{}/resources/{}/{}".format(
+    resource_path = "{}/datasets/{}/fhirStores/{}/fhir/{}/{}".format(
         url, dataset_id, fhir_store_id, resource_type, resource_id
     )
 
@@ -586,7 +586,7 @@ def search_resources_post(
     _search POST method."""
     url = "{}/projects/{}/locations/{}".format(base_url, project_id, cloud_region)
 
-    resource_path = "{}/datasets/{}/fhirStores/{}/resources/{}/_search".format(
+    resource_path = "{}/datasets/{}/fhirStores/{}/fhir/{}/_search".format(
         url, dataset_id, fhir_store_id, resource_type
     )
 
